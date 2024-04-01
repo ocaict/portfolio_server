@@ -77,12 +77,6 @@ app.post("/contact", async (req, res) => {
     text: email,
     html: html(doc),
   };
-  console.log({
-    email: isValidEmail(email),
-    phone: isValidPhoneNumber(phone),
-    name: isValidName(name),
-    message: isValidMessage(message),
-  });
   if (
     !isValidEmail(email) ||
     !isValidPhoneNumber(phone) ||
