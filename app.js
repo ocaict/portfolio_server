@@ -101,8 +101,8 @@ app.post("/contact", async (req, res) => {
         .status(400)
         .send({ success: false, message: "You have already sent a message" });
     const result = await contacts.insertOne(doc);
-    console.log(result);
     const emailResult = await sendEmail(emailInfo);
+    console.log(result, emailResult);
     // const message = await sendSMS({
     //   text: `${name} with the number ${phone} filled out your portfolio contact form`,
     // });
